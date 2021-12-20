@@ -1247,7 +1247,7 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               break
        case 'tebakanime':
               if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply("Selesein yg sebelumnya dulu atuh")
-              anu = await axios.get(`https://api.lolhuman.xyz/api/tebakchara?apikey=NGONTOLLAHKAUDEK`)
+              anu = await fetchJson(`https://api.lolhuman.xyz/api/tebakchara?apikey=NGONTOLLAHKAUDEK`)
               get_result = anu.data.result
               ini_image = get_result.image
               jawaban = get_result.name
